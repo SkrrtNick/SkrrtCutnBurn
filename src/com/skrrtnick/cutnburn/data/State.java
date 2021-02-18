@@ -2,8 +2,12 @@ package com.skrrtnick.cutnburn.data;
 
 public enum State {
     CHOPPING("Chopping"),
+    EQUIPPING("Equipping"),
     BURNING("Burning"),
     WALKING("Walking"),
+    BUYING("Buying"),
+    COLLECTING("Collecting"),
+    BANKING("Banking"),
     STARTING("Starting");
 
     private String name;
