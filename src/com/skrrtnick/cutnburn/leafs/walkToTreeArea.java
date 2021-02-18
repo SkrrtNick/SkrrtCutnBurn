@@ -4,6 +4,7 @@ import com.epicbot.api.shared.APIContext;
 import com.epicbot.api.shared.script.tree.LeafTask;
 import com.skrrtnick.cutnburn.SkrrtCutnBurn;
 import com.skrrtnick.cutnburn.data.State;
+import com.skrrtnick.cutnburn.data.Stats;
 import com.skrrtnick.cutnburn.data.Tree;
 
 public class walkToTreeArea extends LeafTask
@@ -20,7 +21,7 @@ public class walkToTreeArea extends LeafTask
     public void execute()
     {
         SkrrtCutnBurn.state= State.WALKING;
-        ctx.webWalking().walkTo(Tree.getBestTree(ctx.skills().firemaking().getRealLevel(),ctx.skills().woodcutting().getRealLevel()).getArea().getRandomTile());
+        ctx.webWalking().walkTo(Tree.getBestTree(Stats.getFmLvl(ctx),Stats.getWcLvl(ctx)).getArea().getRandomTile());
         System.out.println("Execute " + name);
     }
 }

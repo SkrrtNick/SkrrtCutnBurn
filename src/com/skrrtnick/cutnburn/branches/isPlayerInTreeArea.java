@@ -5,6 +5,7 @@ import com.epicbot.api.shared.script.tree.BranchTask;
 import com.epicbot.api.shared.script.tree.TreeTask;
 import com.skrrtnick.cutnburn.data.Stats;
 import com.skrrtnick.cutnburn.data.Tree;
+import com.skrrtnick.cutnburn.leafs.chopTree;
 import com.skrrtnick.cutnburn.leafs.walkToTreeArea;
 
     public class isPlayerInTreeArea extends BranchTask
@@ -20,7 +21,7 @@ import com.skrrtnick.cutnburn.leafs.walkToTreeArea;
         @Override
         protected TreeTask createSuccessTask(APIContext ctx)
         {
-            return new walkToTreeArea(ctx, name + " -> Success");
+            return new chopTree(ctx, name + " -> Success");
         }
 
         @Override
