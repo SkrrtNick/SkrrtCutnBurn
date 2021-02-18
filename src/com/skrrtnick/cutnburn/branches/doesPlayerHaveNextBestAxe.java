@@ -25,13 +25,12 @@ public class doesPlayerHaveNextBestAxe extends BranchTask
     @Override
     protected TreeTask createFailureTask(APIContext ctx)
     {
-        return new isPlayerInBankArea(ctx, name + " -> Are we in the bank?");
+        return new doesBankHaveNextBestAxe(ctx, name + " -> Are we in the bank?");
     }
 
     @Override
     public boolean validate()
     {
-        System.out.println("We need a " + Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAxeName());
         return ctx.inventory().contains(Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAxeID()) | ctx.equipment().contains(Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAxeID());
     }
 }

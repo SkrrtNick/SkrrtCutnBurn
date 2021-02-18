@@ -22,5 +22,9 @@ public class Stats {
     public static int getAxePrice(APIContext ctx){
         return ctx.grandExchange().getItemDetails(Axe.getBestAxe(getWcLvl(ctx)).getAxeID()).getCurrentPrice();
     }
+    public static int getNextBestAxePrice(APIContext ctx){
+        return ctx.grandExchange().getItemDetails(Axe.getNextBestAxe(getWcLvl(ctx)).getAxeID()).getCurrentPrice();
+    }
+
 
 }

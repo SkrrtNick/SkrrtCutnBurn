@@ -30,7 +30,7 @@ public class canPlayerEquipNextBestAxe extends BranchTask {
     @Override
     public boolean validate() {
 //        System.out.println("We need a " + Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAxeName());
-        return Stats.getAtkLvl(ctx) >= Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAtkLevelRequired();
+        return Stats.getAtkLvl(ctx) >= Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAtkLevelRequired() && ctx.equipment().contains(Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAxeID());
     }
 }
 

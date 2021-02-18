@@ -23,7 +23,7 @@ public class canAffordBestAxe extends BranchTask {
 
     @Override
     protected TreeTask createFailureTask(APIContext ctx) {
-        return new doesPlayerHaveNextBestAxe(ctx, name + " -> We're going to have to use the next best axe, price of " + Axe.getNextBestAxe(Stats.getWcLvl(ctx)).getAxeName() + "is "+ Stats.getAxePrice(ctx) + "gp and we have " + (Stats.getAshPrice(ctx) * Item.getItemStack(ctx,Item.ASHES.getItemID()) + Item.getItemStack(ctx, Item.COINS.getItemID()) + "gp"));
+        return new doesPlayerHaveNextBestAxe(ctx, name + " -> We're going to have to try to use the next best axe, price of " + Axe.getBestAxe(Stats.getWcLvl(ctx)).getAxeName() + " is "+ Stats.getAxePrice(ctx) + "gp and we have " + (Stats.getAshPrice(ctx) * Item.getItemStack(ctx,Item.ASHES.getItemID()) + Item.getItemStack(ctx, Item.COINS.getItemID()) + "gp"));
     }
 
     @Override

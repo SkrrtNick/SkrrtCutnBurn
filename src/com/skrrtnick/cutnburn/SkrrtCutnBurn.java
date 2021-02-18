@@ -37,6 +37,7 @@ public class SkrrtCutnBurn extends TreeScript
     @Override
     public boolean onStart(String... args)
     {
+        setIterationDelay(1000);
 
 //        System.out.println("Ashes: " + Stats.getAshPrice(getAPIContext()) + "gp");
 //        System.out.println(Axe.getBestAxe(Stats.getWcLvl(getAPIContext())).getAxeName() + ": " + getAPIContext().grandExchange().getItemDetails(Axe.getBestAxe(Stats.getWcLvl(getAPIContext())).getAxeID()).getCurrentPrice() + "gp");

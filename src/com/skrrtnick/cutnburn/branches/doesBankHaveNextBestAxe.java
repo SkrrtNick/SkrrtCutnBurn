@@ -23,7 +23,7 @@ public class doesBankHaveNextBestAxe extends BranchTask {
 
     @Override
     protected TreeTask createFailureTask(APIContext ctx) {
-        return new canAffordBestAxe(ctx, name + " -> Do I have the next best axe?");
+        return new canAffordNextBestAxe(ctx, name + " -> Do I have the next best axe?");
     }
 
     @Override
